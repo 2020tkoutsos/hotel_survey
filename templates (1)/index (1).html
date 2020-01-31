@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hotel Kos Survey</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+    <!-- Font Awesome JS -->
+    <script defer src="js/fontawesome-all.min.js"></script>
+  </head>
+  <body class="bg-light py-3 py-lg-5">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="display-4"><b>Hotel Survey</b></h1>
+        <p class="lead">Find your perfect hotel in Kos</p>
+        <p><b>{{ out }}</b></p>
+      </div>
+      <ul class="nav nav-tabs nav-justified" id="nav" role="tablist">
+        <li class="nav-item">
+          <a href="#step-2" class="nav-link h4 mb-0" id="step-2-tab" data-toggle="tab" role="tab" aria-controls="step-2" aria-selected="false">Survey<br><small class="d-none d-md-inline">Click Here to start</small></a>
+        </li>
+      </ul>
+        <form action="/quiz" method="POST">
+        <div class="tab-pane fade pt-4" id="step-2" role="tabpanel" aria-labelledby="step-2-tab">
+          <h2 class="h5 text-center mb-3">In Kos, Greece where would you want to stay?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/hotel.png" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion1" id="radioButtonsQuestion1-1" value="Family Resort">
+                  <label class="form-check-label" for="radioButtonsQuestion1-1">Family Resort</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion1" id="radioButtonsQuestion1-2" value="Small Boutique Hotel">
+                  <label class="form-check-label" for="radioButtonsQuestion1-2">Small Boutique Hotel</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion1" id="radioButtonsQuestion1-3" value="Monument Hotel">
+                  <label class="form-check-label" for="radioButtonsQuestion1-3">Monument Hotel</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="radioButtonsQuestion1" id="radioButtonsQuestion1-6" value="option6">
+                  <label class="form-check-label" for="radioButtonsQuestion1-6">
+                    <input type="text" class="form-control form-control-sm" id="radioButtonsQuestion1-other" placeholder="Other" aria-describedby="radioButtonsQuestion1-other-help">
+                  </label>
+                  <small id="radioButtonsQuestion1-other-help" class="form-text text-muted">If none of the answers above is appropriate for you please write your own answer in the input field.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h2 class="h5 text-center mb-3">What type of hotel would you prefer?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/rest.png" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion2" id="radioButtonsQuestion2-1" value="All Inclusive">
+                  <label class="form-check-label" for="radioButtonsQuestion2-1">All Inclusive</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion2" id="radioButtonsQuestion2-2" value="A La Carte">
+                  <label class="form-check-label" for="radioButtonsQuestion2-2">A La Carte</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="radioButtonsQuestion2" id="radioButtonsQuestion2-6" value="option6">
+                  <label class="form-check-label" for="radioButtonsQuestion2-6">
+                    <input type="text" class="form-control form-control-sm" id="radioButtonsQuestion2-other" placeholder="Other" aria-describedby="radioButtonsQuestion2-other-help">
+                  </label>
+                  <small id="radioButtonsQuestion2-other-help" class="form-text text-muted">If none of the answers above is appropriate for you please write your own answer in the input field.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h2 class="h5 text-center mb-3">What is your budget for your vacation?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/view.png" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion3" id="radioButtonsQuestion3-1" value="1-150 per night">
+                  <label class="form-check-label" for="radioButtonsQuestion3-1">1-150 per night</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion3" id="radioButtonsQuestion3-2" value="200-350 per night">
+                  <label class="form-check-label" for="radioButtonsQuestion3-2">200-350 per night</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion3" id="radioButtonsQuestion3-3" value="400 or more">
+                  <label class="form-check-label" for="radioButtonsQuestion3-3">400 or more</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="radioButtonsQuestion3" id="radioButtonsQuestion3-6" value="option6">
+                  <label class="form-check-label" for="radioButtonsQuestion3-6">
+                    <input type="text" class="form-control form-control-sm" id="radioButtonsQuestion3-other" placeholder="Other" aria-describedby="radioButtonsQuestion3-other-help">
+                  </label>
+                  <small id="radioButtonsQuestion3-other-help" class="form-text text-muted">If none of the answers above is appropriate for you please write your own answer in the input field.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h2 class="h5 text-center mb-3">What type of room would you prefer?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/pool.png" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion4" id="radioButtonsQuestion4-1" value="Ocean View">
+                  <label class="form-check-label" for="radioButtonsQuestion4-1">Ocean View</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion4" id="radioButtonsQuestion4-2" value="Pool View">
+                  <label class="form-check-label" for="radioButtonsQuestion4-2">Pool View</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="radio" name="radioButtonsQuestion4" id="radioButtonsQuestion4-3" value="Garden View">
+                  <label class="form-check-label" for="radioButtonsQuestion4-3">Garden View</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="radioButtonsQuestion4" id="radioButtonsQuestion4-6" value="option6">
+                  <label class="form-check-label" for="radioButtonsQuestion4-6">
+                    <input type="text" class="form-control form-control-sm" id="radioButtonsQuestion4-other" placeholder="Other" aria-describedby="radioButtonsQuestion4-other-help">
+                  </label>
+                  <small id="radioButtonsQuestion4-other-help" class="form-text text-muted">If none of the answers above is appropriate for you please write your own answer in the input field.</small>
+                </div>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg d-block ml-auto">Submit</button>
+          
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('#goto-step-2').on('click', function (e) {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 300, function() {
+            $('#step-2-tab').tab('show');
+          });
+        })
+        $('#goto-step-3').on('click', function (e) {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 1000, function() {
+            $('#step-3-tab').tab('show');
+          });
+        })
+      })
+    </script>
+  </body>
+</html>
